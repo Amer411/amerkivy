@@ -17,7 +17,7 @@ jobs:
 
       # Set up Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4  # تم التحديث إلى الإصدار الأحدث
         with:
           node-version: '20'
 
@@ -29,12 +29,12 @@ jobs:
         shell: bash
 
       - name: Cache Buildozer global directory
-        uses: actions/cache@v3
+        uses: actions/cache@v4  # تم التحديث إلى الإصدار الأحدث
         with:
           path: .buildozer_global
           key: buildozer-global-${{ hashFiles('buildozer.spec') }}
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4  # تم التحديث إلى الإصدار الأحدث
         with:
           path: .buildozer
           key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('buildozer.spec') }}
