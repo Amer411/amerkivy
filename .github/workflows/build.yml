@@ -1,5 +1,3 @@
-# Sample repository at https://github.com/Novfensec/SAMPLE-KIVYMD-APP
-
 name: CI - Android
 
 on:
@@ -16,6 +14,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
       # Used to cache dependencies with a timeout
       - name: Get Date
