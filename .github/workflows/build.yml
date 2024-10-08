@@ -109,7 +109,7 @@ jobs:
       - name: Build with Buildozer
         id: buildozer
         run: |
-          yes | buildozer -v android debug
+          buildozer -v android debug
         # yes | buildozer -v android release
         # run this for generating aab (Android App Bundle) [Required by google play]
 
